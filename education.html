@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Home Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+	<style>
+		
+		html{
+			scroll-behavior:smooth;
+		}
+
+		body{
+    			margin:0;
+    			padding:0;
+
+    			background-image:url('img/background/background2.png');
+			background-size:contain;
+    			background-repeat:repeat;
+    			background-position:center;
+
+			min-height:100vh;
+			font-family:Georgia, serif;
+		}
+
+		ul {
+			list-style-type: none;
+  			padding: 0;
+  			background-color: #DCE8D5;
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  
+ 			gap: 10px;
+
+  			height: 60px;
+			margin: 5px 7px;
+			box-shadow:0 8px 20px rgba(0,0,0,0.06);
+		}
+
+		ul li a {
+  			display: block;
+  			color: #2E5E3B;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  
+ 			font-family: "Courier New", monospace;
+  			font-weight: bold;
+  			font-size: 14px;
+		}
+
+		ul li a:hover {
+  			background-color: #F4C9DA;
+  			border: 2px solid #2E5E3B;
+  			border-radius: 6px;
+  			padding: 8px 15px;
+		}
+
+		.active{
+			background-color:#F4C9DA;
+			border:2px solid #2E5E3B;
+			border-radius:6px;
+			padding:8px 15px;
+		}
+
+	</style>
+
+
+	<style>
+		.page-title{
+    			font-family:'Great Vibes', Cursive;
+    			font-size:100px;
+   			color:#26622E;
+    			text-align:center;
+    			margin-top:20px;
+    			margin-bottom:20px;
+
+			border:3px double #26622F;
+			background:#F4F1EA;
+			
+		}
+
+		.nav-buttons{
+    			text-align:center;
+
+    			margin-top:15px;
+    			margin-bottom:50px;
+		}
+
+		.nav-buttons a{
+    			text-decoration:none;
+    			color:#2E5E3B;
+
+    			font-family:"Courier New", monospace;
+    			font-weight:bold;
+    			font-size:14px;
+
+    			border:2px solid #26622F;
+    			padding:10px 18px;
+    			margin:6px;
+    			border-radius:10px;
+    			background:#DCE8D5;
+    			letter-spacing:1px;
+    			transition:0.3s;
+		}
+
+		.nav-buttons a:hover{
+    			background:#F9CBD6;
+    			transform:translateY(-2px);
+		}
+
+		.timeline{
+    			position:relative;
+    			width:70%;
+    			margin:auto;
+    			padding-bottom:100px;
+		}
+
+		.timeline-box::before{
+    			content:'';
+    			position:absolute;
+    			height:2px;
+    			width:80px;
+    			background:#5d7c63;
+    			top:50%;
+		}
+		
+		.left::before{
+    			left:50%;
+		}
+
+		.right::before{
+    			right:50%;
+		}
+
+		.timeline::after{
+    			content:'';
+    			position:absolute;
+    			width:4px;
+    			background:#5d7c63;
+    			top:0;
+    			bottom:0;
+    			left:50%;
+    			transform:translateX(-50%);
+		}
+
+		.timeline-box{
+    			display:flex;
+    			justify-content:center;
+    			align-items:center;
+
+			gap:10px;
+
+			padding:0 100px;
+
+    			margin:70px 0;
+    			position:relative;
+		}
+
+		.timeline-box::after{
+    			content:'';
+    			position:absolute;
+    			width:16px;
+    			height:16px;
+    			background:#fffaf5;
+    			border:3px solid #5d7c63;
+    			border-radius:50%;
+    			left:50%;
+    			transform:translate(-50%, -50%);
+    			z-index:3;
+		}
+
+		.image-box{
+    			width:200%;
+    			text-align:center;
+		}
+
+		.image-box img{
+    			width:140px;
+			height:140px;
+			object-fit:contain;
+
+    			border:3px solid #5d7c63;
+    			padding:10px;
+    			background:white;
+    			border-radius:20px;
+    			box-shadow:0 5px 15px rgba(0,0,0,0.08);
+		}
+
+		.text-box{
+			position:relative;
+			z-index:2;
+
+			width:380px;
+    			min-height:220px;
+
+    			background:#fffaf5;
+    			padding:25px 35px;
+    			border-radius:30px;
+    			box-shadow:0 5px 15px rgba(0,0,0,0.08);			
+
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+		}
+
+		.text-box h2{
+    			color:#26622F;
+    			font-size:65px;
+			font-family:'Great Vibes', cursive;
+			font-weight: normal;
+
+    			margin-top:0;
+			margin-bottom:15px;
+			
+		}
+
+		.text-box p{
+			max-width:500px;
+    			line-height:1.7;
+    			letter-spacing:1px;
+    			color:#4d4d4d;
+			font-family:"Courier New", monospace;
+			font-size:15px;
+			
+		}
+
+		#degree .text-box{
+    			transform: translateX(40px);
+		}
+
+		.left .text-box{
+    			margin-left:120px;
+		}
+
+		.right .text-box{
+    			margin-right:120px;
+		}
+
+		.right{
+    			flex-direction:row-reverse;
+		}
+
+	@media screen and (max-width:900px){
+
+		.timeline::after{
+    			left:30px;
+			width:2px;
+		}
+
+		.timeline-box{
+    			flex-direction:column;
+    			align-items:flex-start;
+    			margin-left:40px;
+		}
+
+		.right{
+    			flex-direction:column;
+		}
+
+		.timeline-box::after{
+    			left:30px;
+		}
+
+		.image-box,
+		.text-box{
+    			width:100%;
+		}
+
+		.image-box{
+    			margin-bottom:30px;
+		}
+	}
+
+		.school-link{
+    			display:inline-block;
+    			margin-top:15px;
+    			text-decoration:none;
+    			font-family:"Courier New", monospace;
+    			font-size:13px;
+    			color:#26622F;
+    			border-bottom:1px solid #26622F;
+    			transition:0.3s;
+		}
+
+		.school-link:hover{
+    			color:#d48a9b;
+    			border-bottom:1px solid #d48a9b;
+		}
+		
+		footer{
+    			text-align:center;
+    			margin-top:40px;
+    			padding:15px;
+    			background:#DCE8D5;
+    			border-top:1px solid #bdbdbd;
+		}
+		.socials{
+    			margin-bottom:5px;
+		}
+		.socials a{
+    			text-decoration:none;
+    			color:#26622F;
+    			font-size:30px;
+    			margin:0 12px;
+		}
+
+		.socials a:hover{
+    			color:#d48a9b;
+		}
+
+		.copyright{
+    			font-family:"Courier New", monospace;
+    			font-size:13px;
+    			letter-spacing:2px;
+    			color:#7b7b7b;
+		}
+	
+	</style>
+
+</head>
+
+<body>
+
+	<ul>
+		<li><a href="index.html">Home</a></li>
+  		<li><a href="background.html">Background</a></li>
+  		<li><a class="active" href="education.html">Education</a></li>
+  		<li><a href="interests.html">Interests</a></li>
+  		<li><a href="contact.html">Contact</a></li>
+	</ul>
+
+<div class="page-title">
+	Education.
+</div>
+
+<div class="nav-buttons">
+
+<a href="#primary">Primary School</a>
+<a href="#secondary">Secondary School</a>
+<a href="#diploma">Diploma</a>
+<a href="#degree">Degree</a>
+
+</div>
+
+
+<div class="timeline">
+
+	<div class="timeline-box left" id="primary">
+
+        	<div class="image-box">
+
+            		<img src="img/logo/logo1.jpg">
+
+        	</div>
+
+			<div class="text-box">
+
+            			<h2>Primary School</h2>
+
+				<p><b>SK TAMAN AWANA</p>
+				<br>
+				<p>Began my educational journey while building confidence, friendships, and curiousity in learning new things.</p>
+				<br>
+				<p><b>COMPLETED</p>
+
+				<a href="https://www.facebook.com/sktawalorsetar/"
+					target="_blank"
+					class="school-link">
+			
+				Visit Institution ↗
+				</a>
+        		</div>
+
+    	</div>
+
+<div class="timeline-box right" id="secondary">
+
+	<div class="image-box">
+
+        	<img src="img/logo/logo2.jpeg">
+
+        </div>
+
+        <div class="text-box">
+
+            	<h2>Secondary School</h2>
+
+		<p><b>SMK SULTANAH ASMA</p>
+		<br>
+            	<p>Explored creativity, leadership and academic growth while discovering my interests and future ambitions.</p>
+		<br>
+		<p><b>COMPLETED</p>
+
+		<a href="https://www.facebook.com/smk.sultanah.asma.kedah/"
+			target="_blank"
+			class="school-link">
+			
+			Visit Institution ↗
+		</a>
+
+        </div>
+
+</div>
+
+<div class="timeline-box left" id="diploma">
+
+	<div class="image-box">
+
+            	<img src="img/logo/logo3.png">
+
+        </div>
+
+        	<div class="text-box">
+
+            		<h2>Diploma</h2>
+			
+			<p><b>UiTM KEDAH</p>
+			<br>
+            		<p>Pursuing Diploma in Accounting while gaining valuable knowledge, skills, and memorable learning experiences.</p>
+			<br>
+			<p><b>COMPLETED</p>
+
+			<a href="https://kedah.uitm.edu.my/"
+				target="_blank"
+				class="school-link">
+			
+			Visit Institution ↗
+			</a>
+		
+        	</div>
+</div>
+
+<div class="timeline-box right" id="degree">
+
+	<div class="image-box">
+
+       		<img src="img/logo/logo3.png">
+
+        </div>
+
+        	<div class="text-box">
+
+            		<h2>Degree</h2>
+
+            		<p><b>UiTM KEDAH</p>
+			<br>
+            		<p>Currently pursuing my degree while continuing to improve academically, professionally, and personally..</p>
+			<br>
+			<p><b>ON GOING</p>
+			
+				<a href="https://kedah.uitm.edu.my/"
+					target="_blank"
+					class="school-link">
+			
+					Visit Institution ↗
+				</a>
+
+        	</div>
+</div>
+</div>
+
+<footer>
+
+    <div class="socials">
+
+        <a href="https://instagram.com" target="_blank">
+            	<ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank">
+            	<ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+
+        <a href="https://youtube.com" target="_blank">
+            	<ion-icon name="logo-youtube"></ion-icon>
+        </a>
+
+        <a href="https://facebook.com" target="_blank">
+            	<ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+    </div>
+
+    	<p class="copyright">
+        © 2026 Ainun Husna. IML470 Individual Project.
+    </p>
+
+</footer>
+
+</body>
+</html>

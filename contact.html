@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Home Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		*{
+    			margin:0;
+    			padding:0;
+    			box-sizing:border-box;
+		}
+
+		body{
+    			margin:0;
+    			padding:0;
+
+    			background-image:url('img/background/background1.png');
+			background-size:contain;
+    			background-repeat:repeat;
+    			background-position:center;
+			min-height:100vh;
+			display:flex;
+			flex-direction:column;
+			font-family:"Courier New", monospace;
+		}
+
+		ul {
+			list-style-type: none;
+  			padding: 0;
+  			background-color: #F4F1EA;
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  
+ 			gap: 10px;
+
+  			height: 60px;
+			margin: 5px 7px;
+			box-shadow:0 4px 12px rgba(0,0,0,0.08);
+		}
+
+		ul li a {
+  			display: block;
+  			color: #26622F;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  
+ 			font-family: "Courier New", monospace;
+  			font-weight: bold;
+  			font-size: 14px;
+		}
+
+		ul li a:hover {
+  			background-color: #F9CBD6;
+  			border: 2px solid #26622F;
+  			border-radius: 6px;
+  			padding: 8px 15px;
+		}
+
+		.active{
+			background-color:#F9CBD6;
+			border:2px solid #26622E;
+			border-radius:6px;
+			padding:8px 15px;
+		}
+
+	</style>
+
+
+	<style>
+		.page-title{
+    			font-family:'Great Vibes', Cursive;
+    			font-size:100px;
+   			color:#26622E;
+    			text-align:center;
+    			margin-top:20px;
+    			margin-bottom:20px;
+
+			border:3px double #26622F;
+			background:#F4F1EA;
+			
+		}
+		
+		.postcard{
+    			width:80%;
+    			max-width:900px;
+			margin:20px auto;
+
+    			background:#efebe5;
+
+    			border:6px double #26622F;
+    			padding:50px;
+    			position:relative;
+		}
+
+		.postcard::before{
+    			content:"";
+    			position:absolute;
+    			top:18px;
+    			left:18px;
+    			right:18px;
+    			bottom:18px;
+
+    			border:2px solid #D48A9B;    			
+			pointer-events:none;
+		}
+
+		.contact-section{
+    			display:flex;
+    			justify-content:space-between;
+    			gap:50px;
+			align-items:flex-start;
+		}
+
+		.contact-info{
+    			width:42%;
+		}
+
+		.contact-info h1{
+			font-family:'Great Vibes', cursive;
+    			font-size:60px;
+    			font-weight:normal;
+    			margin-bottom:25px;
+
+			color:#26622F;
+		}
+
+		.description{
+    			font-size:15px;
+    			line-height:1.7;
+    			margin-bottom:35px;
+    			max-width:450px;
+		}
+
+		.info-box{
+    			margin-bottom:20px;
+		}
+
+		.info-box h4{
+			font-family:'Great Vibes', cursive;
+    			font-size:30px;
+			font-weight:normal;
+    			margin-bottom:8px;
+
+			color:#26622F;
+		}
+
+		.info-box p{
+    			font-size:18px;
+		}
+
+		.contact-form{
+    			width:58%;
+		}
+
+		.contact-form h1{
+			font-family:'Great Vibes', cursive;
+    			font-size:60px;
+    			font-weight:normal;
+    			margin-bottom:25px;
+
+			color:#26622F;
+		}
+
+		.contact-form h1 span{
+    			font-style:italic;
+		}
+
+		form{
+    			display:flex;
+    			flex-direction:column;
+		}
+
+		input,
+		textarea{
+    			width:100%;
+    			background:transparent;
+
+    			border:3px double #26622F;
+    			padding:10px;
+    			margin-bottom:15px;
+    			border-radius:8px;
+
+    			font-size:15px;
+    			font-family:Georgia, serif;
+
+    			outline:none;
+		}
+
+		textarea{
+    			height:70px;
+    			resize:none;
+		}
+
+		button{
+    			width:100%;
+    			padding:10px;
+
+    			border-radius:40px;
+    			border:3px double #26622F;
+    			background:transparent;
+    			letter-spacing:4px;
+    			font-size:13px;
+    			font-family:Georgia, serif;
+
+    			cursor:pointer;
+    			transition:0.3s;
+		}
+
+		button:hover{
+    			background:#26622F;
+    			color:white;
+		}
+
+	@media(max-width:900px){
+
+    		.postcard{
+        		padding:40px;
+    		}
+
+    		.contact-section{
+        		flex-direction:column;
+    		}
+
+    		.contact-info,
+    		.contact-form{
+        		width:100%;
+    		}
+	}
+
+		footer{
+    			text-align:center;
+    			margin-top:40px;
+    			padding:15px;
+    			background:#F4F1EA;
+    			border-top:1px solid #bdbdbd;
+		}
+		.socials{
+    			margin-bottom:5px;
+		}
+		.socials a{
+    			text-decoration:none;
+    			color:#26622F;
+    			font-size:30px;
+    			margin:0 12px;
+		}
+
+		.socials a:hover{
+    			color:#d48a9b;
+		}
+
+		.copyright{
+    			font-family:"Courier New", monospace;
+    			font-size:13px;
+    			letter-spacing:2px;
+    			color:#7b7b7b;
+		}
+	
+	</style>
+
+</head>
+
+<body>
+
+	<ul>
+		<li><a href="index.html">Home</a></li>
+  		<li><a href="background.html">Background</a></li>
+  		<li><a href="education.html">Education</a></li>
+  		<li><a href="interests.html">Interests</a></li>
+  		<li><a class="active" href="contact.html">Contact</a></li>
+	</ul>
+
+<div class="page-title">
+	Contact.
+</div>
+
+<div class="postcard">
+
+	<section class="contact-section">
+
+		<div class="contact-info">
+
+            		<h1><center>My Contact Info</h1>
+
+            		<p class="description">
+                	Use the form to contact me, I will be happy to read your story.
+                	Feel free to ask any questions that interest you.
+            		</p>
+
+            
+            		<div class="info-box">
+
+                		<h4>Phone</h4>
+                		<p>+60 17-479 6832</p>
+            		</div>
+
+            
+            		<div class="info-box">
+
+                		<h4>Email</h4>
+                		<p>nunahsn33@gmail.com</p>
+            		</div>
+
+        	</div>
+
+        		<div class="contact-form">
+
+            			<h1><center>Get in Touch</h1>
+
+            		<form>
+
+                		<input type="text" placeholder="NAME *">
+
+                		<input type="email" placeholder="E-MAIL *">
+
+                		<textarea placeholder="MESSAGE"></textarea>
+
+                		<button type="submit">SEND</button>
+
+            		</form>
+
+        		</div>
+	
+	</section>
+
+</div>
+
+<footer>
+
+    <div class="socials">
+
+        <a href="https://instagram.com" target="_blank">
+            	<ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank">
+            	<ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+
+        <a href="https://youtube.com" target="_blank">
+            	<ion-icon name="logo-youtube"></ion-icon>
+        </a>
+
+        <a href="https://facebook.com" target="_blank">
+            	<ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+    </div>
+
+    	<p class="copyright">
+        © 2026 Ainun Husna. IML470 Individual Project.
+    </p>
+
+</footer>
+
+</body>
+</html>	
+
+

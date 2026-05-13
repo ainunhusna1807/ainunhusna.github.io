@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Home Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bodoni+Moda:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+	<style>
+
+		body{
+    			margin:0;
+    			padding:0;
+
+    			background-image:url('img/background/background1.png');
+			background-size:contain;
+    			background-repeat:repeat;
+    			background-position:center;
+			min-height:100vh;
+			display:flex;
+			flex-direction:column;
+		}
+
+		ul {
+			list-style-type: none;
+  			padding: 0;
+  			background-color: #F4F1EA;
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  
+ 			gap: 10px;
+
+  			height: 60px;
+			margin: 5px 7px;
+			box-shadow:0 4px 12px rgba(0,0,0,0.08);
+		}
+
+		ul li a {
+  			display: block;
+  			color: #26622F;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  
+ 			font-family: "Courier New", monospace;
+  			font-weight: bold;
+  			font-size: 14px;
+		}
+
+		ul li a:hover {
+  			background-color: #F9CBD6;
+  			border: 2px solid #26622F;
+  			border-radius: 6px;
+  			padding: 8px 15px;
+		}
+
+		.active{
+			background-color:#F9CBD6;
+			border:2px solid #26622E;
+			border-radius:6px;
+			padding:8px 15px;
+		}
+
+	</style>
+
+
+	<style>
+		.page-title{
+    			font-family:'Great Vibes', Cursive;
+    			font-size:100px;
+   			color:#26622E;
+    			text-align:center;
+    			margin-top:20px;
+    			margin-bottom:20px;
+
+			border:3px double #26622F;
+			background:#F4F1EA;
+			
+		}
+
+		.welcome{
+			font-family: 'Great Vibes', cursive;
+			font-size: 90px;
+			color:#26622E;
+			line-height:1;
+			margin-bottom:-5px;
+			margin-top:10px;
+			text-align:center;
+		}	
+
+		.blog{
+    			font-family:'Bodoni Moda', serif;
+    			font-size:50px;
+    			letter-spacing:2px;
+    			color:#2d4b38;
+   	 		margin-bottom:30px;
+			text-align:center;
+		}
+		.subtitle{
+    			font-family:'Space Mono', monospace;
+    			color:#26622E;
+    			text-align:center;
+    			letter-spacing:2px;
+    			line-height:1.8;
+			font-size:13px;
+			margin-top:20px;
+		}
+	
+		.container{
+   			width:90%;
+			max-width:850px;
+    			margin:10px auto;
+    			padding:20px;
+			border:2px solid #26622E;
+    			background:#F4F1EA;
+		}
+	
+		.frame{
+    			border:1px solid #26622E;
+			padding:30px;
+			display:flex;
+    			align-items:center;
+    			gap:20px;
+			justify-content:space-between;
+			text-align:center;
+
+    			background:#F4F1EA;
+		}
+		
+		.frame img{
+    			width:250px;
+    			height:300px;
+    			object-fit:cover;
+			border:2px solid #26622E;
+    			outline:1px solid #bdbdbd;
+    			outline-offset:8px;
+		}
+
+		.images{
+    			display:flex;
+    			flex-direction:column;
+    			gap:20px;
+		}
+
+		.images img{
+    			width:250px;
+    			height:180px;
+    			object-fit:cover;
+    			border:2px solid #26622E;
+    			outline:1px solid #bdbdbd;
+    			outline-offset:8px;
+		}
+
+		footer{
+    			text-align:center;
+    			margin-top:40px;
+    			padding:15px;
+    			background:#F4F1EA;
+    			border-top:1px solid #bdbdbd;
+		}
+		.socials{
+    			margin-bottom:5px;
+		}
+		.socials a{
+    			text-decoration:none;
+    			color:#26622F;
+    			font-size:30px;
+    			margin:0 12px;
+		}
+
+		.socials a:hover{
+    			color:#d48a9b;
+		}
+
+		.copyright{
+    			font-family:"Courier New", monospace;
+    			font-size:13px;
+    			letter-spacing:2px;
+    			color:#7b7b7b;
+		}
+	
+	</style>
+
+</head>
+
+<body>
+
+	<ul>
+		<li><a href="index.html">Home</a></li>
+  		<li><a class="active" href="background.html">Background</a></li>
+  		<li><a href="education.html">Education</a></li>
+  		<li><a href="interests.html">Interests</a></li>
+  		<li><a href="contact.html">Contact</a></li>
+	</ul>
+
+<div class="page-title">
+	Background.
+</div>
+
+<div class="container">
+
+	<div class="frame">
+		<img src="img/myself/me2.jpg">
+
+		<div class="text">
+
+			<div class="welcome">
+				Get To,
+			</div>
+		
+			<div class="blog">
+					know Me.
+			</div>
+
+				<div class="subtitle">
+					<p><b>NAME:</b> AINUN HUSNA BINTI JA'AFAR</p>
+					<p><b>AGE:</b> 22 YEARS OLD</p>
+					<p><b>COURSE TAKEN:</b> BACHELOR OF INFORMATION SCIENCE (HONOURS) LIBRARY MANAGEMENT</p>
+					<p><b>BIRTHPLACE:</b> HOSPITAL JITRA, KEDAH.</p>
+					<p><b>BIRTH DATE:</b> 18 JULY 2004</p>
+					<p><b>LIVE IN:</b> ALOR SETAR, KEDAH.</p>
+				</div>
+		</div>
+ 	</div>
+</div>
+
+
+<div class="container">
+
+	<div class="frame">
+    
+        	<div class="text">
+
+            		<div class="welcome">
+                		My Lovely
+            		</div>
+
+				<div class="blog">
+					family.
+				</div>
+            				
+					<div class="subtitle">
+                			"Family will always be my biggest comfort and the ones
+                			who have shaped me into who I am today. No matter how messy life gets, they're the people who make everything feel lighter, warmer, and a little more okay. Growing up with their love is something I'll always be grateful for. They're my forever support system."
+            				</div>
+        	</div>
+
+		<div class="images">
+        		<img src="img/family/family1.jpg">
+			<img src="img/family/family2.jpg">
+    		</div>
+	</div>
+</div>
+
+<footer>
+
+    <div class="socials">
+
+        <a href="https://instagram.com" target="_blank">
+            	<ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank">
+            	<ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+
+        <a href="https://youtube.com" target="_blank">
+            	<ion-icon name="logo-youtube"></ion-icon>
+        </a>
+
+        <a href="https://facebook.com" target="_blank">
+            	<ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+    </div>
+
+    	<p class="copyright">
+        © 2026 Ainun Husna. IML470 Individual Project.
+    </p>
+
+</footer>
+
+</body>
+</html>

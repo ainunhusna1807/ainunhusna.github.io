@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Home Page</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+	<style>
+
+		body{
+    			margin:0;
+    			padding:0;
+
+    			background-image:url('img/background/background2.png');
+			background-size:contain;
+    			background-repeat:repeat;
+    			background-position:center;
+
+			min-height:100vh;
+			font-family:Georgia, serif;
+		}
+
+		ul {
+			list-style-type: none;
+  			padding: 0;
+  			background-color: #DCE8D5;
+  			display: flex;
+  			justify-content: center;
+  			align-items: center;
+  
+ 			gap: 10px;
+
+  			height: 60px;
+			margin: 5px 7px;
+			box-shadow:0 8px 20px rgba(0,0,0,0.06);
+		}
+
+		ul li a {
+  			display: block;
+  			color: #2E5E3B;
+  			padding: 14px 16px;
+  			text-decoration: none;
+  
+ 			font-family: "Courier New", monospace;
+  			font-weight: bold;
+  			font-size: 14px;
+		}
+
+		ul li a:hover {
+  			background-color: #F4C9DA;
+  			border: 2px solid #2E5E3B;
+  			border-radius: 6px;
+  			padding: 8px 15px;
+		}
+
+		.active{
+			background-color:#F4C9DA;
+			border:2px solid #2E5E3B;
+			border-radius:6px;
+			padding:8px 15px;
+		}
+
+	</style>
+
+
+	<style>
+		.page-title{
+    			font-family:'Great Vibes', Cursive;
+    			font-size:100px;
+   			color:#26622E;
+    			text-align:center;
+    			margin-top:20px;
+    			margin-bottom:20px;
+
+			border:3px double #26622F;
+			background:#F4F1EA;
+			
+		}
+
+		.welcome{
+			font-family: 'Great Vibes', cursive;
+			font-size: 90px;
+			color:#26622E;
+			line-height:1;
+			margin-bottom:-5px;
+			margin-top:10px;
+			text-align:center;
+		}	
+
+		.blog{
+    			font-family:'Bodoni Moda', serif;
+    			font-size:50px;
+    			letter-spacing:2px;
+    			color:#2d4b38;
+   	 		margin-bottom:30px;
+			text-align:center;
+		}
+		.subtitle{
+    			font-family:'Space Mono', monospace;
+    			color:#26622E;
+    			text-align:center;
+    			letter-spacing:2px;
+    			line-height:1.8;
+			font-size:13px;
+			margin-top:20px;
+			max-width:800px;
+			margin:auto;
+		}
+		
+		.music-section{
+    			display:flex;
+    			justify-content:center;
+    			align-items:center;
+    			gap:20px;
+
+    			margin-top:30px;
+    			margin-bottom:30px;
+		}
+
+		.music-image img{
+    			width:45px;
+    			height:45px;
+
+    			object-fit:cover;
+
+    			border:2px solid #26622F;
+
+    			outline:1px solid #26622F;
+    			outline-offset:3px;
+
+    			background:#F4F1EA;
+			display:block;
+		}
+
+		.music-center{
+    			display:flex;
+    			justify-content:center;
+    			align-items:center;
+		}
+
+		.audio-player{
+    			width:240px;
+
+    			filter:sepia(20%) saturate(70%) hue-rotate(50deg);
+		}
+	
+		.container{
+   			width:850px;
+    			margin:10px auto;
+    			padding:20px;
+			border:2px solid #26622E;
+    			background:#F4F1EA;
+		}
+	
+		.frame{
+    			border:1px solid #26622E;
+			padding:30px;
+			display:flex;
+    			align-items:center;
+    			gap:20px;
+			justify-content:space-between;
+			text-align:center;
+
+    			background:#F4F1EA;
+			flex-direction:column;
+		}
+		.music-frame{
+			flex-direction:column;
+			justify-content:center;
+			text-align:center;
+			padding:60px;
+		}
+		
+		.frame img{
+    			width:250px;
+    			height:300px;
+			max-width:none;
+
+    			object-fit:cover;
+			border:2px solid #26622E;
+    			outline:1px solid #bdbdbd;
+    			outline-offset:8px;
+		}
+
+		.images{
+    			display:flex;
+    			flex-direction:column;
+    			gap:20px;
+		}
+
+		.images img{
+    			width:250px;
+    			height:180px;
+    			object-fit:cover;
+    			border:2px solid #26622E;
+    			outline:1px solid #bdbdbd;
+    			outline-offset:8px;
+		}
+
+		.sunset-frame{
+    			flex-direction:column;
+    			text-align:center;
+		}
+
+		.sunset-gallery{
+    			display:grid;
+    			grid-template-columns:repeat(3, 1fr);
+
+    			gap:18px;
+			justify-content:center;
+    			margin-bottom:35px;
+		}
+
+		.sunset-description{
+    			max-width:700px;
+		}
+
+		.sunset-description p{
+    			font-family:"Space Mono", monospace;
+
+    			font-size:15px;
+    			line-height:2;
+
+    			color:#26622F;
+		}		
+
+		.motorsport-frame{
+    			flex-direction:column;
+    			text-align:center;
+		}
+
+		.f1-top-gallery{
+    			display:flex;
+    			justify-content:center;
+    			gap:25px;
+
+    			margin-top:20px;
+    			margin-bottom:35px;
+		}
+
+		.f1-gallery{
+    			display:grid;
+
+    			grid-template-columns:repeat(3, auto);
+
+    			justify-content:center;
+
+    			gap:18px;
+
+    			margin-top:35px;
+    			margin-bottom:35px;
+		}
+
+		footer{
+    			text-align:center;
+    			margin-top:40px;
+    			padding:15px;
+    			background:#DCE8D5;
+    			border-top:1px solid #bdbdbd;
+		}
+		.socials{
+    			margin-bottom:5px;
+		}
+		.socials a{
+    			text-decoration:none;
+    			color:#26622F;
+    			font-size:30px;
+    			margin:0 12px;
+		}
+
+		.socials a:hover{
+    			color:#d48a9b;
+		}
+
+		.copyright{
+    			font-family:"Courier New", monospace;
+    			font-size:13px;
+    			letter-spacing:2px;
+    			color:#7b7b7b;
+		}
+	
+	</style>
+
+</head>
+
+<body>
+
+	<ul>
+		<li><a href="index.html">Home</a></li>
+  		<li><a href="background.html">Background</a></li>
+  		<li><a href="education.html">Education</a></li>
+  		<li><a class="active" href="interests.html">Interests</a></li>
+  		<li><a href="contact.html">Contact</a></li>
+	</ul>
+
+<div class="page-title">
+	Interests.
+</div>
+
+<div class="container">
+
+	<div class="frame music-frame">
+
+		<div class="text">
+
+			<div class="welcome">
+				My Favourite Song,
+			</div>
+		
+			<div class="blog">
+					Love Wins All by IU.
+			</div>
+
+				<div class="music-section">
+
+    					<div class="music-image">
+        					<img src="img/song/album1.jpg">
+    					</div>
+
+    				<div class="music-center">
+        				<audio controls class="audio-player">
+            					<source src="audio/lovewinsall.mp3" type="audio/mp3">
+        				</audio>
+    				</div>
+
+    				<div class="music-image">
+        				<img src="img/song/artist1.webp">
+    				</div>
+
+			</div>
+
+				<div class="subtitle">
+
+    					<p>
+        					“Love Wins All” by IU is one of my favourite songs because it feels deeply emotional and comforting at the same time. The lyrics, melody, and cinematic atmosphere make the song feel very sincere and meaningful. I love how soft yet powerful the emotions are throughout the song, especially the feeling of loving someone even through sadness, fear, and uncertainty. It is the kind of song that feels warm, nostalgic, and quietly beautiful every time I listen to it.
+    					</p>
+
+				</div>
+		</div>
+ 	</div>
+</div>
+
+
+<div class="container">
+
+	<div class="frame sunset-frame">
+
+        	<div class="welcome">
+    			Golden Hour Hunter
+		</div>
+
+		<div class="blog">
+    			Sunset Lover.
+		</div>
+
+        		<div class="sunset-gallery">
+
+            			<div class="music-image">
+                			<img src="img/interest/sunset1.jpg">
+            			</div>
+
+            			<div class="music-image">
+                			<img src="img/interest/sunset2.jpg">
+            			</div>
+
+            			<div class="music-image">
+                			<img src="img/interest/sunset3.jpg">
+            			</div>
+
+            			<div class="music-image">
+                			<img src="img/interest/sunset4.png">
+            			</div>
+
+            			<div class="music-image">
+                			<img src="img/interest/sunset5.jpg">
+            			</div>
+
+            			<div class="music-image">
+                			<img src="img/interest/sunset6.jpg">
+            			</div>
+
+        		</div>
+
+        				<div class="sunset-description">
+
+            					<p>
+                					Capturing sunsets and sunrises became one of my favourite little hobbies because every sky feels different and special. I love the soft golden light, warm colours, and peaceful atmosphere during golden hour. Taking these photos allows me to appreciate quiet moments, nature, and beautiful memories in a simple way.
+            					</p>
+
+        				</div>
+	</div>
+</div>
+
+
+<div class="container">
+
+	<div class="frame motorsport-frame">
+
+        	<div class="welcome">
+            		My Fav Motorsport
+        	</div>
+
+        	<div class="blog">
+            		Formula One.
+        	</div>
+
+        		<div class="f1-top-gallery">
+
+            			<div class="music-image">
+                			<img src="img/interest/formula1.jpg">
+            			</div>
+
+            			<div class="music-image">
+                			<img src="img/interest/formula2.jpg">
+            			</div>
+
+            			<div class="music-image">
+                			<img src="img/interest/formula3.jpg">
+            			</div>
+
+        		</div>
+
+				<div class="music-center">
+
+            				<audio controls class="audio-player">
+                				<source src="audio/losemymind.mp3" type="audio/mp3">
+            				</audio>
+        			</div>
+
+
+        			<div class="sunset-description">
+
+            				<p>
+                				Formula One became one of my favourite sports because of the adrenaline, team strategy, speed, and emotions behind every race. I enjoy watching the intense competition between drivers and teams, especially during dramatic race moments and qualifying sessions. My favourite drivers are Max Verstappen, Kimi Antonelli, and Lando Norris because they all bring different energy and personalities to the sport, which makes watching Formula One even more exciting and enjoyable for me. Whether it's chaotic team radios, unexpected podium moments, or late-night race weekends, Formula One somehow always keeps me emotionally invested and entertained every single time.
+            				</p>
+
+        			</div>
+
+        			<div class="f1-gallery">
+
+            				<div class="music-image">
+                				<img src="img/interest/formula4.jpg">
+            				</div>
+
+            				<div class="music-image">
+                				<img src="img/interest/formula5.jpg">
+            				</div>
+
+            				<div class="music-image">
+                				<img src="img/interest/formula6.jpg">
+            				</div>
+
+            				<div class="music-image">
+                				<img src="img/interest/formula7.jpg">
+            				</div>
+
+            				<div class="music-image">
+                				<img src="img/interest/formula8.jpg">
+            				</div>
+
+            				<div class="music-image">
+                				<img src="img/interest/formula9.jpg">
+            				</div>
+
+        			</div>
+	</div>
+
+</div>
+
+<footer>
+
+    <div class="socials">
+
+        <a href="https://instagram.com" target="_blank">
+            	<ion-icon name="logo-instagram"></ion-icon>
+        </a>
+
+        <a href="https://tiktok.com" target="_blank">
+            	<ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+
+        <a href="https://youtube.com" target="_blank">
+            	<ion-icon name="logo-youtube"></ion-icon>
+        </a>
+
+        <a href="https://facebook.com" target="_blank">
+            	<ion-icon name="logo-facebook"></ion-icon>
+        </a>
+
+    </div>
+
+    	<p class="copyright">
+        © 2026 Ainun Husna. IML470 Individual Project.
+    </p>
+
+</footer>
+
+</body>
+</html>
